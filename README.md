@@ -159,3 +159,24 @@ git clone https://github.com/AnuragPrajapati05/FSEXP1.4.3.git
 # git commit -m "Concurrent ticket booking system with Redis locking"
 # git push origin main
 ```
+
+## Deploy on Vercel (CLI)
+1. Install Vercel CLI:
+   ```bash
+   npm install -g vercel
+   ```
+2. Login:
+   ```bash
+   vercel login
+   ```
+3. Set environment variable in Vercel project settings:
+   - `REDIS_URL` = your public Redis URL (for example Upstash Redis URL)
+4. Deploy production:
+   ```bash
+   vercel --prod
+   ```
+
+Example deployed endpoints:
+- `https://<your-vercel-domain>/api/seats`
+- `https://<your-vercel-domain>/api/book`
+- `https://<your-vercel-domain>/api/bookings`
