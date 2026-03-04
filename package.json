@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "fsexp1.4.3-concurrent-ticket-booking",
   "version": "1.0.0",
   "description": "Concurrent ticket booking system with Redis seat locking",
