@@ -1,0 +1,15 @@
+﻿config:
+  target: "http://localhost:3000"
+  phases:
+    - duration: 20
+      arrivalRate: 5
+      rampTo: 100
+      name: "100 concurrent users attempting bookings"
+scenarios:
+  - name: "Concurrent booking attempts"
+    flow:
+      - post:
+          url: "/api/book"
+          json:
+            user: "user-{{ $randomString() }}"
+            seat: "{{ $randomInt(1, 100) }}"
